@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">{% endblock %}
+</head>
+
+<header>
+    <h1><b><u>HERE BE BOOKS</b></u></h1>
+</header>
+
+<body>
+
+    <nav>
+        <ul>
+            <a href="/"><li>Home</li></a>
+            <li>About</li>
+            <a href="/book_list"><li>All Books</li></a>
+            <a href="/book_list/new"><li>Add book</li></a>
+        </ul>
+    </nav>
+
+
+
+
+    {% block content %}
+    {% endblock %}
+
+
+
+
+    <footer>END OF AWESOME LIBRARY WEBSITE YAY</footer>
+</body>
+
+</html>

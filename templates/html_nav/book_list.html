@@ -1,0 +1,55 @@
+{% extends "base_layout.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='book_list_style.css') }}">
+{% endblock %}
+
+{% block content%}
+
+<main>
+    <table>
+        <caption>List of books</caption>
+        <th><b>Actions</b></th>
+        <th><b>Information</b></th>
+        <th><b>Title</b></th>
+        <th><b>Genre</b></th>
+        <th><b>Author</b></th>
+        <th><b>Status</b></th>
+        <th><b>Due by</b></th>
+
+    </table>
+</main>
+{%for item in list[1:] %}
+
+
+<section>
+    <table>
+        <tr>
+            <td>
+                <form class="form-inline" action="/book_list/delete/{{ item.title }}" method="POST">
+                <input type="submit" value="Delete"></form>
+            </td>
+            <td><a href="/book/{{list.index(item)}}">More</a></td>
+
+            <td>{{item.title}}</td>
+            <td>{{item.genre}}</td>
+            <td>{{item.author}}</td>
+            {% if item.check_out == True %}
+            <td>On Loan</td>
+            <td>{{item.returnby}}</td>
+            {% else %}
+            <td>Book Avaliable</td>
+            {% endif %}
+        </tr>
+
+    </table>
+</section>
+
+
+
+{% endfor %}
+
+
+
+</div>
+{% endblock %}

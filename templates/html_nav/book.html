@@ -1,0 +1,19 @@
+{% extends "base_layout.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='home_style.css') }}">
+{% endblock %}
+
+{% block content%}
+
+<p>{{book.title}}:{{book.author}}:{{book.genre}}</p>
+<form action="/book/checkout/{{book.title}}" method="POST">
+    
+    
+    <input type="checkbox" id="loanbook" name="LoanBook" value="loan">
+    <button type="submit">Loan this book</button>
+
+    <a href="/book_list">Back</a>
+</form>
+{% endblock %}
+

@@ -1,0 +1,12 @@
+body>h1{
+    display:flex;
+    justify-content: center;
+    color: rgb(5, 5, 82);}
+body>div{
+    display:flex;
+    justify-content: center;
+    flex-direction:column;
+    margin:5% 20% 0% 20%;
+    font-size:20px;
+    
+}

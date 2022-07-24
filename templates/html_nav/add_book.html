@@ -1,0 +1,25 @@
+{% extends "base_layout.html" %}
+{% block content %}
+
+    <section>
+    <form action="/book_list/" method="POST">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title">
+        <label for="author">Author:</label>
+        <input type="text" name="author" id="author">
+        <label for="Genre">Genre</label>
+        <select name="genre" id="genre">
+            <option value="genre_1">Genre_1</option>
+            <option value="genre_2">Genre_2</option>
+            <option value="genre_3">Genre_3</option>
+        
+        <input type="submit" value="Add Book">
+        </select>
+
+
+
+
+    </form>
+    </section>
+
+{% endblock %}

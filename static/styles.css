@@ -1,0 +1,25 @@
+body>header>h1{
+    display:flex;
+    justify-content:center;
+    background-color: rgba(18, 86, 103, 0.675);
+    padding:2% 0;
+    
+}
+body>nav>ul{
+    border: 2px solid rgba(18, 86, 103, 0.675);
+    display:flex;
+    justify-content: flex-end;
+    justify-content: space-around ;
+}
+
+footer{
+    display:flex;
+    justify-content:center;
+    position: fixed;
+    padding: 2% 0;
+    bottom: 0;
+    width: 100%;
+   
+    
+    background: rgba(18, 86, 103, 0.675);
+}
